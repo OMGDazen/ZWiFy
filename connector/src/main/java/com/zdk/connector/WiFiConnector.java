@@ -32,6 +32,7 @@ import android.net.wifi.WifiManager;
 import android.text.TextUtils;
 import android.util.Log;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -165,7 +166,7 @@ public class WiFiConnector {
     }
 	
 	private static void sortByPriority(final List<WifiConfiguration> configurations) {
-		java.util.Collections.sort(configurations, new Comparator<WifiConfiguration>() {
+		Collections.sort(configurations, new Comparator<WifiConfiguration>() {
 
 			@Override
 			public int compare(WifiConfiguration object1,
